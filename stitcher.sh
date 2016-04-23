@@ -1,3 +1,4 @@
+#! /bin/sh
 rm final.mp4
 words=($1)
 echo ${words[*]}
