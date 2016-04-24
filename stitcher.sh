@@ -1,5 +1,5 @@
 #! /bin/sh
-rm final.mp4
+rm public/final.mp4
 words=($1)
 echo ${words[*]}
 i=0
@@ -21,7 +21,7 @@ done
 cat *.mpg > final.mpg
 
 ffmpeg -i final.mpg -r 20 stage.mp4
-ffmpeg -i stage.mp4 -vf scale=920:640 final.mp4
+ffmpeg -i stage.mp4 -vf scale=920:640 public/final.mp4
 
 rm *.mpg   
 rm stage.mp4
