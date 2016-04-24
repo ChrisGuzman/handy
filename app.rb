@@ -11,7 +11,7 @@ end
   enable :raise_errors
 
   get '/' do
-    make_video(params)
+    erb :main
   end
 
   get '/translate' do

@@ -18,10 +18,10 @@ for orig_mp4 in *.mp4; do
    i=$((i+1))
 done
 
-cat *.mpg > final.mpg
+cat *.mpg > public/final.mpg
 
-ffmpeg -i final.mpg -r 20 stage.mp4
-ffmpeg -i stage.mp4 -vf scale=920:640 public/final.mp4
+ffmpeg -i public/final.mpg -r 20 public/stage.mp4
+ffmpeg -i public/stage.mp4 -vf scale=920:640 public/final.mp4
 
 rm *.mpg   
-rm stage.mp4
+rm public/stage.mp4
